@@ -1,0 +1,8 @@
+{
+  "name": "web-components-example-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "examples/web-components-example-e2e/src",
+  "projectType": "application",
+  "targets": {},
+  "implicitDependencies": ["web-components-example"]
+}
