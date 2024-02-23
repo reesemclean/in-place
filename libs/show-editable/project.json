@@ -1,0 +1,23 @@
+{
+  "name": "show-editable",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/show-editable/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/show-editable",
+        "main": "libs/show-editable/src/index.ts",
+        "tsConfig": "libs/show-editable/tsconfig.lib.json",
+        "assets": ["libs/show-editable/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs show-editable {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    }
+  },
+  "tags": []
+}

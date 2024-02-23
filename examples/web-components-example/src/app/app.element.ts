@@ -1,9 +1,11 @@
 import './app.element.css';
+import { showEditable } from '@in-place/show-editable';
 
 export class AppElement extends HTMLElement {
   public static observedAttributes = [];
 
   connectedCallback() {
+    showEditable();
     const title = 'web-components-example';
     this.innerHTML = `
     <div class="wrapper">

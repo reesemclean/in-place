@@ -42,5 +42,12 @@
       "unitTestRunner": "none",
       "e2eTestRunner": "playwright"
     }
+  },
+  "targetDefaults": {
+    "@nx/vite:build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    }
   }
 }
